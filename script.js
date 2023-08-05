@@ -141,7 +141,11 @@ while (i<6) {
     }
 }
 
-console.log(`Your Spirit Animal is ${messages.spiritAnimal[Math.floor(Math.random()*messages.spiritAnimal.length)]}`);
-console.log(messages.inspiration[Math.floor(Math.random()*messages.inspiration.length)]);
-console.log(`Your lucky numbers are: ${messages.luckyNumbers}`);
-console.log('Spirit Animals sourced from https://themindfool.com/spirit-animal-list/');
+const displayMsg = () => {
+    console.log(`Your Spirit Animal is ${messages.spiritAnimal[Math.floor(Math.random()*messages.spiritAnimal.length)]}`);
+    console.log(messages.inspiration[Math.floor(Math.random()*messages.inspiration.length)]);
+    console.log(`Your lucky numbers are: ${messages.luckyNumbers}`);
+    console.log('Spirit Animals sourced from https://themindfool.com/spirit-animal-list/');
+};
+
+displayMsg();
