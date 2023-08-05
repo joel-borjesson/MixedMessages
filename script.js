@@ -108,8 +108,24 @@ const messages = {
         set luckyNumbers(newNum) {
             this._luckyNumbers.push(newNum);
         },
-    inspiration: []
+    inspiration: ["You look nice today",
+            "There is always light. If only we're brave enough to see it. If only we're brave enough to be it. ~ Amanda Gorman",
+            "If you want to lift yourself up, lift up someone else. ~ Booker T. Washington",
+            "You’re braver than you believe, stronger than you seem, and smarter than you think. ~ A.A. Milne",
+            "All our dreams can come true — if we have the courage to pursue them. ~ Walt Disney",
+            "A person who never made a mistake never tried anything new. ~ Albert Einstein",
+            "If what you have done yesterday still looks big to you, you haven't done much today. ~ Mikhail Gorbachev",
+            "If you tell the truth, you don't have to remember anything. ~ Mark Twain",
+            "Reader, suppose you were an idiot. And suppose you were a member of Congress. But I repeat myself. ~ Mark Twain",
+            "You smell nice today",
+            "I bet you'd like some chocolate.",
+            "What's for dinner?",
+            "I do not fear death. I had been dead for billions and billions of years before I was born, and had not suffered the slightest inconvenience from it. ~ Mark Twain",
+            "Change will not come if we wait for some other person or some other time. We are the ones we've been waiting for. We are the change that we seek. ~ Barack Obama",
+            "When ignorant folks want to advertise their ignorance, you don't really have to do anything, you just let them talk. ~ Barack Obama"
+        ]
 };
+
 
 // Duplicate numbers should not be allowed, check if the random number already exists in the array
 let i = 0;
@@ -126,5 +142,6 @@ while (i<6) {
 }
 
 console.log(`Your Spirit Animal is ${messages.spiritAnimal[Math.floor(Math.random()*messages.spiritAnimal.length)]}`);
+console.log(messages.inspiration[Math.floor(Math.random()*messages.inspiration.length)]);
 console.log(`Your lucky numbers are: ${messages.luckyNumbers}`);
 console.log('Spirit Animals sourced from https://themindfool.com/spirit-animal-list/');
