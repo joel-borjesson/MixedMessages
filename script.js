@@ -132,7 +132,7 @@ let i = 0;
 
 while (i<6) {
     let randNum = Math.floor(Math.random()*100)+1;
-    if (messages.luckyNumbers.includes(randNum) === false) {
+    if (!messages.luckyNumbers.includes(randNum)) {
         messages.luckyNumbers = randNum;
         i++;
     }
