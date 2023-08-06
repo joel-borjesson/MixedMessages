@@ -142,9 +142,19 @@ while (i<6) {
 }
 
 const displayMsg = () => {
-    console.log(`Your Spirit Animal is ${messages.spiritAnimal[Math.floor(Math.random()*messages.spiritAnimal.length)]}`);
-    console.log(messages.inspiration[Math.floor(Math.random()*messages.inspiration.length)]);
-    console.log(`Your lucky numbers are: ${messages.luckyNumbers}`);
+    for (const message in messages) {
+        switch (message) {
+            case 'spiritAnimal':
+                console.log(`Your Spirit Animal is ${messages.spiritAnimal[Math.floor(Math.random()*messages.spiritAnimal.length)]}`);
+                break;
+            case 'inspiration':
+                console.log(messages.inspiration[Math.floor(Math.random()*messages.inspiration.length)]);
+                break;
+            case 'luckyNumbers':
+                console.log(`Your lucky numbers are: ${messages.luckyNumbers}`);
+                break;
+        };
+    };
     console.log('Spirit Animals sourced from https://themindfool.com/spirit-animal-list/');
 };
 
