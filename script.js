@@ -132,11 +132,8 @@ let i = 0;
 
 while (i<6) {
     let randNum = Math.floor(Math.random()*100)+1;
-    if (i === 0) {
+    if (messages.luckyNumbers.includes(randNum) === false) {
         messages.luckyNumbers = randNum;
-        i++;
-    } else if (messages.luckyNumbers.includes(randNum) === false) {
-        messages.luckyNumbers = " " + randNum;
         i++;
     }
 }
@@ -151,6 +148,12 @@ const displayMsg = () => {
                 console.log(messages.inspiration[Math.floor(Math.random()*messages.inspiration.length)]);
                 break;
             case 'luckyNumbers':
+                messages.luckyNumbers.sort(function(a, b) {
+                    return a - b;
+                });
+                for (i=1;i<6;i++) {
+                    messages.luckyNumbers[i] = " " +  messages.luckyNumbers[i];
+                };
                 console.log(`Your lucky numbers are: ${messages.luckyNumbers}`);
                 break;
         };
