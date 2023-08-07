@@ -151,10 +151,8 @@ const displayMsg = () => {
                 messages.luckyNumbers.sort(function(a, b) {
                     return a - b;
                 });
-                for (i=1;i<6;i++) {
-                    messages.luckyNumbers[i] = " " +  messages.luckyNumbers[i];
-                };
-                console.log(`Your lucky numbers are: ${messages.luckyNumbers}`);
+                let luckyString = messages.luckyNumbers.join(', ');
+                console.log(`Your lucky numbers are: ${luckyString}`);
                 break;
         };
     };
